@@ -1,0 +1,20 @@
+.certification {
+    width: 700px;
+    max-width: 90%;
+    margin: 0 auto 0 auto;
+    text-align: left;
+}
+
+.certification img {
+    width: 700px;
+    max-width: 95%;
+}
+
+.certification h2 {
+    float: left;
+    margin-bottom: 0px;
+}
+
+.certification p {
+    float: left;
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Suspense} from "react";
 
 import HomePage from "./HomePage";
 import {
@@ -7,7 +7,13 @@ import {
   Redirect,
   Switch
 } from "react-router-dom";
+
+import LoadingSpinner from "./LoadingSpinner";
 import InProgress from "./InProgress";
+//import About from "./About";
+//import Education from "./Education";
+const Education = React.lazy(() => import("./Education"));
+const About = React.lazy(() => import("./About"))
 
 function App() {
   let routes;
@@ -17,13 +23,13 @@ function App() {
         <HomePage />
       </Route>
       <Route path="/about" exact>
-        <InProgress title={"About"} />
+        <About />
       </Route>
-      <Route path="/travels" exact>
-        <InProgress title={"Travels"} />
+      <Route path="/education" exact>
+        <Education />
       </Route>
-      <Route path="/album" exact>
-        <InProgress title={"Photo Album"} />
+      <Route path="/projects" exact>
+        <InProgress title={"Projects"} />
       </Route>
       <Redirect to="/" />
     </Switch>
@@ -31,8 +37,10 @@ function App() {
 
   return (
     <Router>
-      <main>{routes}</main>
-    </Router>
+        <main><Suspense fallback={<div className="center">
+          <LoadingSpinner />
+        </div>}>{routes}</Suspense></main>
+      </Router>
   );
 }
 

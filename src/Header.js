@@ -3,6 +3,8 @@ import React from "react";
 import NavigationBar from "./NavigationBar";
 import Markus from "./images/markus-bitmoji2.png";
 
+import "./Header.css";
+
 function Header() {
   return (
     <header>

@@ -3,23 +3,23 @@ import { NavLink } from "react-router-dom";
 
 function NavigationBar() {
   return (
-    <ul>
-                <li>
-                  <NavLink to="/about" exact>
-                    About
-                  </NavLink>
-                </li>
-                <li>
-                <NavLink to="/travels" exact>
-                    Travels
-                  </NavLink>
-                </li>
-                <li>
-                <NavLink to="/album" exact>
-                    Photo Album
-                  </NavLink>
-                </li>
-              </ul>
+    <ul className="menu">
+      <li className="menu-link">
+        <NavLink to="/about" exact>
+          About
+        </NavLink>
+      </li>
+      <li className="menu-link">
+        <NavLink to="/education" exact>
+          Education
+        </NavLink>
+      </li>
+      <li className="menu-link">
+        <NavLink to="/projects" exact>
+          Projects
+        </NavLink>
+      </li>
+    </ul>
   );
 }
 

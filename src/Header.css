@@ -1,0 +1,42 @@
+header {
+  position: absolute;
+  margin: 0 0 0 0;
+  padding-top: 0;
+  height: 10vh;
+  width: 100%;
+  max-width: 100%;
+  background-color: var(--main-bg-color);
+}
+
+#navbar-container {
+  position: absolute;
+  height: 70%;
+  top: 15%;
+  right: 5%;
+}
+
+#avatar-container {
+  position: absolute;
+  height: 70%;
+  top: 15%;
+  left: 5%;
+  z-index: 4;
+  background-color: red;
+}
+
+.menu {
+  margin: 0;
+  padding: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+}
+
+.menu-link {
+  display: inline-block;
+  padding: 20px 10px 20px 10px;
+}
+
+#header-avatar {
+  height: 100%;
+}

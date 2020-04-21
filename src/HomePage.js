@@ -3,11 +3,10 @@ import React from "react";
 import Cloud from "./images/cloud.png";
 import Mountain from "./images/mountain.png";
 import Markus from "./images/markus-bitmoji.png";
-import Chillies from "./images/chillies.png";
-import Computer from "./images/computer.png";
 
 import Header from "./Header";
-import Footer from "./Footer";
+import BottomContainer from "./BottomContainer";
+import Skills from "./Skills";
 
 function HomePage() {
   return (
@@ -15,10 +14,10 @@ function HomePage() {
       <Header />
       <div className="top-container">
         <div id="upper-half">
-          <img className="top-cloud" src={Cloud} alt="cloud"></img>
+          <img className="cloud top-cloud" src={Cloud} alt="cloud"></img>
           <h1>I'm Markús</h1>
-          <h2>A front end developer based in Iceland</h2>
-          <img className="bottom-cloud" src={Cloud} alt="cloud"></img>
+          <h2>A web developer based in Iceland</h2>
+          <img className="cloud bottom-cloud" src={Cloud} alt="cloud"></img>
           <img className="mountain-img" src={Mountain} alt="mountain"></img>
         </div>
         <div id="lower-half">
@@ -36,51 +35,10 @@ function HomePage() {
           </p>
         </div>
         <hr />
-        <div className="skills">
-          <h2>My Skills.</h2>
-          <div className="skill-row">
-            <img
-              id="skill1"
-              className="skill-img"
-              src={Computer}
-              alt="Skill 1"
-            ></img>
-            <h3>Lorem & Ipsum</h3>
-            <p>
-              Lorem ipsum dolor sit amet, quis in duis, iaculis id felis.
-              Consectetuer vestibulum, nunc urna lectus, erat ligula. Hendrerit
-              nam, lectus ante, ut lorem eros.
-            </p>
-          </div>
-          <div className="skill-row">
-            <img
-              id="skill2"
-              className="skill-img"
-              src={Chillies}
-              alt="Skill 2"
-            ></img>
-            <h3>Lorem Ipsum Dolor</h3>
-            <p>
-              Lorem ipsum dolor sit amet, mauris sed consectetuer. Etiam et eu,
-              bibendum interdum, lacus quis mauris. Curabitur wisi, quisque vel
-              eu, rutrum nam.
-            </p>
-          </div>
-        </div>
+        <Skills />
         <hr />
-        <div className="contact-me">
-          <h2>Get In Touch</h2>
-          <h3>If you love climbing as much as I do</h3>
-          <p className="contact-message">
-            Love climbing as much as I do? Let's talk about why slopers are such
-            an endless source of fun vibes!
-          </p>
-          <a href="mailto:name@email.com" class="BUTTON_WPK">
-            Contact Me
-          </a>
-        </div>
       </div>
-      <Footer />
+      <BottomContainer />
     </React.Fragment>
   );
 }

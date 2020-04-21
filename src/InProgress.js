@@ -1,19 +1,20 @@
 import React from "react";
 
 import Header from "./Header";
-import Footer from "./Footer";
+import BottomContainer from "./BottomContainer";
+import "./ContentPages.css";
 
 function InProgress(props) {
   return (
-    <div>
+    <React.Fragment>
       <Header />
-      <div className="in-progress">
-        <h1>{props.title}</h1>
+      <div className="content-pages in-progress">
+        <h1 className="content-page-title">{props.title}</h1>
         <p>This page is currently in progress</p>
       </div>
 
-      <Footer />
-    </div>
+      <BottomContainer />
+    </React.Fragment>
   );
 }
 
